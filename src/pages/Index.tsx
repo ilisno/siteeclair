@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
-import { FeaturedProjectSection } from "@/components/FeaturedProjectSection"; // Import du nouveau composant
-import { ContactFormSection } from "@/components/ContactFormSection";
+import { FeaturedProjectSection } from "@/components/FeaturedProjectSection";
 import { AppointmentSection } from "@/components/AppointmentSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -12,9 +11,9 @@ const Index = () => {
       <Header />
       <HeroSection />
       <FeaturesSection />
-      <FeaturedProjectSection /> {/* Ajout du nouveau composant ici */}
+      <FeaturedProjectSection />
       <AppointmentSection />
-      <ContactFormSection />
+      {/* <ContactFormSection /> - Supprimé comme demandé */}
       <Footer />
     </div>
   );
