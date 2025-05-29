@@ -15,7 +15,6 @@ export const Footer = () => {
             <li><a href="#appointment" className="hover:text-blue-400 transition-colors duration-200">Rendez-vous</a></li>
           </ul>
         </nav>
-        <MadeWithDyad />
       </div>
     </footer>
   );
