@@ -17,7 +17,7 @@ export const HeroSection = () => {
         <Button
           size="lg"
           className="bg-white text-blue-700 hover:bg-gray-100 text-xl md:text-2xl px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-600"
-          onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
         >
           Je prends rendez-vous
         </Button>
