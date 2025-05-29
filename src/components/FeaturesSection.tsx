@@ -34,7 +34,7 @@ export const FeaturesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader className="pb-4">
+              <CardHeader className="pb-4 flex flex-col items-center"> {/* Ajout de flex flex-col items-center ici */}
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</CardTitle>
               </CardHeader>
