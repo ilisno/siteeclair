@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="bg-gray-800 dark:bg-gray-950 text-white py-8 text-center">
       <div className="container mx-auto px-4">
         <p className="text-sm mb-4">
-          © {new Date().getFullYear()} Votre Entreprise. Tous droits réservés.
+          © {new Date().getFullYear()} Site Éclair. Tous droits réservés.
         </p>
         <nav className="mb-4">
           <ul className="flex justify-center space-x-6 text-sm">
