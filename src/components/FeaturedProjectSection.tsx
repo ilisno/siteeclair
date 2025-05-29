@@ -9,17 +9,11 @@ export const FeaturedProjectSection = () => {
           Notre Dernière Réalisation
         </h2>
         <Card className="overflow-hidden rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 flex flex-col md:flex-row">
-          <div className="md:w-1/2">
-            <img
-              src="/smoothiebananefraise.png"
-              alt="smoothiebananefraise.fr"
-              className="w-full h-64 md:h-full object-cover"
-            />
-          </div>
-          <div className="md:w-1/2 p-6 flex flex-col justify-center">
+          {/* L'image a été supprimée comme demandé */}
+          <div className="md:w-full p-6 flex flex-col justify-center"> {/* Ajustement de la largeur pour occuper tout l'espace */}
             <CardHeader className="p-0 mb-4">
               <CardTitle className="text-2xl font-semibold text-gray-900 dark:text-white">
-                smoothiebananefraise.fr
+                AFonte.fr
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0 mb-6">
@@ -31,7 +25,7 @@ export const FeaturedProjectSection = () => {
               asChild
               className="bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg rounded-md transition-colors duration-300"
             >
-              <a href="https://smoothiebananefraise.fr" target="_blank" rel="noopener noreferrer">
+              <a href="https://afonte.fr" target="_blank" rel="noopener noreferrer">
                 Visiter le site
               </a>
             </Button>
