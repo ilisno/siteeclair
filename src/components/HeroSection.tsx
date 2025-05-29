@@ -19,7 +19,7 @@ export const HeroSection = () => {
           className="bg-white text-blue-700 hover:bg-gray-100 text-xl md:text-2xl px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-600"
           onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          Demander un site à 190€
+          Je prends rendez-vous
         </Button>
         <p className="text-md md:text-xl mt-8 font-medium animate-fade-in-up delay-800">
           Livraison en <span className="font-bold text-yellow-300">48 heures</span> !
