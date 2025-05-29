@@ -11,7 +11,7 @@ export const FeaturedProjectSection = () => {
         <Card className="overflow-hidden rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600 flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <img
-              src="https://via.placeholder.com/800x600/A78BFA/FFFFFF?text=smoothiebananefraise.fr"
+              src="/smoothiebananefraise.png"
               alt="smoothiebananefraise.fr"
               className="w-full h-64 md:h-full object-cover"
             />
