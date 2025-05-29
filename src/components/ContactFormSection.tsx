@@ -12,7 +12,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { showSuccess, showError } from "@/utils/toast";
+import { showSuccess, showError, showLoading, dismissToast } from "@/utils/toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,11 +38,33 @@ export const ContactFormSection = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Formulaire soumis:", values);
-    // Ici, vous intégreriez la logique d'envoi du formulaire (ex: à une API)
-    showSuccess("Votre message a été envoyé avec succès ! Nous vous recontacterons sous peu.");
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const toastId = showLoading("Envoi de votre message...");
+    try {
+      // REMPLACEZ 'YOUR_FORMSPREE_ENDPOINT' PAR L'URL DE VOTRE FORMULAIRE FORMSPREE
+      // Exemple: https://formspree.io/f/yourformid
+      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        dismissToast(toastId);
+        showSuccess("Votre message a été envoyé avec succès ! Nous vous recontacterons sous peu.");
+        form.reset();
+      } else {
+        dismissToast(toastId);
+        showError("Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer.");
+        console.error("Erreur Formspree:", response.status, await response.text());
+      }
+    } catch (error) {
+      dismissToast(toastId);
+      showError("Une erreur réseau est survenue. Veuillez vérifier votre connexion.");
+      console.error("Erreur d'envoi du formulaire:", error);
+    }
   }
 
   return (
